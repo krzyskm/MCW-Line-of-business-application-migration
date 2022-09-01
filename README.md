@@ -28,11 +28,15 @@ In this whiteboard design session, you will look at how to design an Azure migra
 
 At the end of this workshop, you will be better able to design and implement the discovery and assessment of environments to evaluate their readiness for migrating to Azure using services including Azure Migrate and Azure Database Migration Service.
 
-## Hands-on lab
+Continue to the [Whiteboard design session](https://github.com/microsoft/MCW-Line-of-business-application-migration/tree/master/Whiteboard%20design%20session) documents folder.
+
+### Hands-on lab
 
 In this hands-on lab, you will learn how to assess and migrate a multi-tier application from Hyper-V to Azure. You will learn how to use Azure Migrate as the hub for executing a migration, together with accompanying tools.
 
 After this hands-on lab, you will know the role of Azure Migrate and related migration tools and how to use them to successfully migrate an on-premises multi-tier application to Azure.
+
+Continue to the [Hands-on lab](https://github.com/microsoft/MCW-Line-of-business-application-migration/tree/master/Hands-on%20lab) documents folder.
 
 ## Azure services and related products
 
@@ -43,6 +47,7 @@ After this hands-on lab, you will know the role of Azure Migrate and related mig
 
 ## Related references
 
+- [MCW](https://microsoftcloudworkshop.com)
 - [Azure Migration Center](https://azure.microsoft.com/migration)
 - [Azure Database Migration Guide](https://aka.ms/datamigration)
 
