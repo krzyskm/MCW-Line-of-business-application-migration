@@ -21,7 +21,7 @@ New-Item -ItemType SymbolicLink -Path "C:\Users\All Users\Desktop" -Name "Comman
 
 # Create path
 Write-Output "Create paths"
-$opsDir = "C:\OpsgilityTraining"
+$opsDir = "C:\MCWOpsDir"
 New-Item -Path $opsDir -ItemType directory -Force
 
 # Format data disk
