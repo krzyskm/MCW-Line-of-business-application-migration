@@ -85,7 +85,7 @@
         }
     },
     "variables": {
-        "baseUri": "https://openhackpublic.blob.core.windows.net/lob-migration/sept-2021",
+        "baseUri": "https://solliancepublicdata.blob.core.windows.net/mcw-lineofbusiness",
         "HostRG": "[concat(parameters('resourceGroupBaseName'), 'HostRG')]",
         "hostUri": "[concat(variables('baseUri'),'/SmartHotelHost.json')]",
         "LZRG": "[concat(parameters('resourceGroupBaseName'), 'RG')]",
