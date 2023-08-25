@@ -184,7 +184,7 @@ Import-Module BitsTransfer
 
 # Create paths
 Write-Output "Create paths"
-$opsDir = "C:\OpsgilityTraining"
+$opsDir = "C:\MCWOpsDir"
 $vmDir = "F:\VirtualMachines"
 $tempDir = "D:\"
 New-Item -Path $vmDir -ItemType directory -Force
@@ -195,23 +195,23 @@ Unregister-ScheduledTask -TaskName "SetUpVMs" -Confirm:$false
 
 # Download AzCopy. We won't use the aka.ms/downloadazcopy link in case of breaking changes in later versions
 Write-Output "Download and install AzCopy"
-$azcopyUrl = "https://cloudworkshop.blob.core.windows.net/line-of-business-application-migration/sept-2020/azcopy_windows_amd64_10.1.1.zip"
+$azcopyUrl = "https://solliancepublicdata.blob.core.windows.net/mcw-lineofbusiness/azcopy_windows_amd64_10.20.1.zip"
 $azcopyZip = "$opsDir\azcopy.zip"
 Start-BitsTransfer -Source $azcopyUrl -Destination $azcopyZip
 $azcopyZipfile = Get-ChildItem -Path $azcopyZip
 Expand-Files -Files $azcopyZipfile -Destination $opsDir
-$azcopy = "$opsDir\azcopy_windows_amd64_10.1.1\azcopy.exe"
+$azcopy = "$opsDir\azcopy_windows_amd64_10.20.1\azcopy.exe"
 
 # Download SmartHotel VMs from blob storage
 # Also download Azure Migrate appliance (saves time in lab later)
 Write-Output "Download nested VM zip files using AzCopy"
-$sourceFolder = 'https://cloudworkshop.blob.core.windows.net/line-of-business-application-migration/sept-2020'
+$sourceFolder = 'https://solliancepublicdata.blob.core.windows.net/mcw-lineofbusiness'
 
 cmd /c "$azcopy cp --check-md5 FailIfDifferentOrMissing $sourceFolder/SmartHotelWeb1.zip $tempDir\SmartHotelWeb1.zip" | Add-Content $cmdLogPath
 cmd /c "$azcopy cp --check-md5 FailIfDifferentOrMissing $sourceFolder/SmartHotelWeb2.zip $tempDir\SmartHotelWeb2.zip" | Add-Content $cmdLogPath
 cmd /c "$azcopy cp --check-md5 FailIfDifferentOrMissing $sourceFolder/SmartHotelSQL1.zip $tempDir\SmartHotelSQL1.zip" | Add-Content $cmdLogPath
 cmd /c "$azcopy cp --check-md5 FailIfDifferentOrMissing $sourceFolder/UbuntuWAF.zip $tempDir\UbuntuWAF.zip" | Add-Content $cmdLogPath
-cmd /c "$azcopy cp --check-md5 FailIfDifferentOrMissing $sourceFolder/AzureMigrateAppliance_v25.22.04.11.zip $tempDir\AzureMigrate.zip" | Add-Content $cmdLogPath
+cmd /c "$azcopy cp --check-md5 FailIfDifferentOrMissing $sourceFolder/AzureMigrateAppliance.zip $tempDir\AzureMigrate.zip" | Add-Content $cmdLogPath
 
 # Unzip the VMs
 Write-Output "Unzip nested VMs"

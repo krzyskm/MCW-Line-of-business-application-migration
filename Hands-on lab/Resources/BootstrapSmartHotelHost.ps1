@@ -21,7 +21,7 @@ New-Item -ItemType SymbolicLink -Path "C:\Users\All Users\Desktop" -Name "Comman
 
 # Create path
 Write-Output "Create paths"
-$opsDir = "C:\OpsgilityTraining"
+$opsDir = "C:\MCWOpsDir"
 New-Item -Path $opsDir -ItemType directory -Force
 
 # Format data disk
@@ -37,7 +37,7 @@ New-Item -Path $7zDir -ItemType directory -Force
 
 # Download post-migration script and 7z
 Write-Output "Download with Bits"
-$sourceFolder = 'https://openhackpublic.blob.core.windows.net/lob-migration/sept-2021'
+$sourceFolder = 'https://solliancepublicdata.blob.core.windows.net/mcw-lineofbusiness'
 $downloads = @( `
      "$sourceFolder/PostRebootConfigure.ps1" `
     ,"$sourceFolder/7z/7za.exe" `
