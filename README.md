@@ -1,6 +1,6 @@
 # Line-of-business application migration
 
-## NOTE: This workshop will retire November 16, 2023. This workshop is no longer being maintained.
+## NOTE: NOTE: This workshop is archived and no longer being maintained. Content is read-only.
 
 Fabrikam Fabrics is a major manufacturer and distributor of clothing and soft furnishing materials. The CTO, James Lynch, was hired 6 months ago with a mandate to address ever-increasing IT costs. He has identified a sprawling IT estate, including a substantial legacy server footprint with 448 servers and VMs identified to date. There is a complex web of dependencies between servers and no-one has a clear view of the entire estate.
 
